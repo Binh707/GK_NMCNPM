@@ -1,0 +1,32 @@
+B
+    iÕó]	  ã               @   sp   d dl mZmZ d dlmZ d dlmZ ddl T ddlm	Z	 d d„ Z
+d	d
+„ Z
+d
+d„ Zd
+d„ Z
+dd„ Zdd„ ZdS )é    )ÚrenderÚredirect)ÚHttpResponse)Úinlineformset_factoryé   )Ú*)Ú	OrderFormc             C   s`   t j ¡ }tj ¡ }| ¡ }| ¡ }|jdd ¡ }|jdd ¡ }|||||dœ} t| d| ƒS )NÚ	Delivered)ÚstatusÚ Pending)ÚordersÚ	customersÚtotal_ordersÚ	deliveredÚ pendingzaccounts/dashboard.html) ÚOrderÚ objectsÚallÚCustomerÚcountÚfilterr   )Ú requestr   r
+   Ztotal_customersr   r   r   Ú context© r   ú6C:\Users\denni\OneDrive\Desktop\crm1\accounts\views.pyÚhome
+   s    
+
+r   c             C   s   t j ¡ }t| dd|iƒS )Nzaccounts/products.htmlÚproducts)Ú Productr   r   r   )r   r   r   r   r   r      s    
+r   c             C   s8   t jj|d}|j ¡ }| ¡ }|||dœ}t| d|ƒS )N)Úid)Úcustomerr   Ú
+order_countzaccounts/customer.html) r   r   ÚgetÚ	order_setr   r   r   )r   Z pk_testr   r   r    r   r   r   r   r      s
+    
+r   c             C   st   t ttddd}tjj|d}|tj ¡ |d}| jdkr`|| j |d }| ¡ r`| 	¡  t
+dƒS d	|i}t
+| d
+|ƒS )
+N)Ú productr
+   é
+   )ÚfieldsÚextra)r   )ÚquerysetÚinstanceÚPOST)r(   ú/Ú formsetzaccounts/order_form.html)r   r   r   r   r!   ÚnoneÚmethodr)   Úis_validÚsaver   r   )r   ÚpkZOrderFormSetr   r+   r   r   r   r   Ú
+createOrder)   s    
+r1   c             C   s\   t jj|d}t|d}| jdkrHt| j|d}| ¡ rH|  ¡  tdƒS d|i}t	| d|ƒS ) N)r   )r(   r)   r*   Úformzaccounts/order_form.html)
+r   r   r!   r   r-   r)   r.   r/   r   r   )r   r0   Úorderr2   r   r   r   r   Ú
+updateOrder9   s    
+
+r4   c             C   s<   t jj|d}| jdkr(| ¡  tdƒS d|i}t| d|ƒS )N)r   r)   r*   Úitemzaccounts/delete.html) r   r   r!   r-   Údeleter   r   )r   r0   r3   r   r   r   r   Ú
+deleteOrderG   s    
+r7   N)Zdjango.shortcutsr   r   Ú
+django.httpr   Zdjango.formsr   ÚmodelsÚformsr   r   r   r   r1   r4   r7   r   r   r   r   Ú<module>   s   
+
