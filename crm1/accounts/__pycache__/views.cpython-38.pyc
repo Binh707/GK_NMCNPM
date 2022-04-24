@@ -1,0 +1,64 @@
+U
+    ×2^-  ã                   @   s´  d dl mZmZ d dlmZ d dlmZ d dl mZ d dl	m
+Z
+m
+Z
+mZ d dl
+mZ d d lmZ d dlmZ d	d
+lT d	d
+lmZmZmZ d	dlmZ d	d
+lmZmZmZ edd„ ƒZedd„ ƒZdd„ Z eddedd„ ƒƒZ!eddedgddd„ ƒƒZ"eddedgddd„ ƒƒZ#eddedgddd „ ƒƒZ$eddedgdd!d„ ƒƒZ%eddedgdd"d#„ ƒƒZ&eddedgdd$d%„ ƒƒZ'eddedgdd&d'„ ƒƒZ(d(S ))é    )ÚrenderÚredirect)ÚHttpResponse)Úinlineformset_factory)ÚUserCreationForm)ÚauthenticateÚloginÚlogout)Úmessages)Úlogin_required)ÚGroupé   )Ú*)Ú	OrderFormÚCreateUserFormÚCustomerForm)Ú
+OrderFilter)Úunauthenticated_userÚ
+allowed_usersÚ
+admin_onlyc                 C   sb   t ƒ }| jdkrNt | jƒ}| ¡ rN| ¡ }|j d¡}t  | d| ¡ t	dƒS d|i}t
+| d|ƒS ) NÚPOSTÚusernamezAccount was created for r   Úformzaccounts/register.html)
+r   Úmethodr   Úis_validÚsaveÚcleaned_dataÚgetr
+   Ú successr   r   )Ú requestr   Úuserr   Ú context© r"   ú6C:\Users\denni\OneDrive\Desktop\crm1\accounts\views.pyÚregisterPage   s    
+
+r$   c                 C   sf   | j dkrV| j d¡}| j d¡}t| ||d}|d k	rJt| |ƒ tdƒS t  | d¡ i }t| d |ƒS )Nr   r   Úpassword)r   r%   Úhomez!Username OR password is incorrectzaccounts/login.html)	r   r   r   r    r   r   r
+   Úinfor   )r   r   r%   r    r!   r"   r"   r#   Ú	loginPage&   s    
+
+r(   c                 C   s   t | ƒ tdƒS )Nr   )r	   r   )r   r"   r"   r#   Ú
+logoutUser8   s    r)   r   )Ú	login_urlc                 C   s`   t j ¡ }tj ¡ }| ¡ }| ¡ }|jdd ¡ }|jdd ¡ }|||||dœ} t| d| ƒS )NÚ	Delivered©ÚstatusÚ Pending)ÚordersÚ	customersÚtotal_ordersÚ	deliveredÚ pendingzaccounts/dashboard.html) ÚOrderÚ objectsÚallÚCustomerÚcountÚfilterr   )r   r/   r0   Ztotal_customersr1   r2   r3   r!   r"   r"   r#   r&   <   s    
+
+ şr&   Úcustomer)Z
+allowed_rolesc                 C   sZ   | j jj ¡ }| ¡ }|jdd ¡ }|jdd ¡ }td|ƒ ||||dœ}t | d|ƒS ) Nr+   r,   r.   z ORDERS:)r/   r1   r2   r3   zaccounts/user.html)r    r:   Ú	order_setr6   r8   r9   Úprintr   )r   r/   r1   r2   r3   r!   r"   r"   r#   ÚuserPageN   s    
+ ÿr=   c                 C   sR   | j j}t|d}| jdkr>t| j| j|d}| ¡ r>|  ¡  d|i}t| d|ƒS )N©Úinstancer   r   zaccounts/account_settings.html)	r    r:   r   r   r   ÚFILESr   r   r   )r   r:   r   r!   r"   r"   r#   ÚaccountSettings]   s    
+
+rA   Úadminc                 C   s   t j ¡ }t| dd|iƒS )Nzaccounts/products.htmlÚproducts)Ú Productr5   r6   r   )r   rC   r"   r"   r#   rC   o   s    
+rC   c                  C   sN   t jj|d}|j ¡ }| ¡ }t| j |d}|j}||||dœ}t	| d|ƒS )N©Úid)Úqueryset)r:   r/   Ú
+order_countÚmyFilterzaccounts/customer.html)
+r7   r5   r   r;   r6   r8   r   ÚGETÚqsr   ) r   Z pk_testr:   r/   rH   rI   r!   r"   r"   r#   r:   v   s    
+ÿc                  C   s~   t ttddd}tjj|d}|tj ¡ |d}| jdkrjt | jƒ}|| j|d }| 	¡ rj| 
+¡  t
+dƒS d	|i}t| d
+|ƒS )
+N)Ú productr-   é
+   )ÚfieldsÚextrarE   )rG   r?   r   r>   ú/r   úaccounts/order_form.html)
+r   r7   r4   r5   r   Únoner   r   r   r   r   r   r   ) r   ÚpkZOrderFormSetr:   Ú formsetr   r!   r"   r"   r#   Ú
+createOrder…   s    
+
+rU   c                 C   sf   t jj|d}t|d}td|ƒ | jdkrRt| j|d}|  ¡ rR| ¡  t	dƒS d|i}t
+| d |ƒS )NrE   r>   zORDER:r   rP   r   rQ   )
+r4   r5   r   r   r<   r   r   r   r   r   r   )r   rS   Úorderr   r!   r"   r"   r#   Ú
+updateOrder—   s    
+
+
+rW   c                 C   s<   t jj|d}| jdkr(| ¡  tdƒS d|i}t| d|ƒS )NrE   r   rP   Úitemzaccounts/delete.html) r4   r5   r   r   Údeleter   r   )r   rS   rV   r!   r"   r"   r#   Ú
+deleteOrder§   s    
+rZ   N))Údjango.shortcutsr   r   Ú
+django.httpr   Zdjango.formsr   Údjango.contrib.auth.formsr   Údjango.contrib.authr    r   r	   Údjango.contribr
+   Údjango.contrib.auth.decoratorsr
+   Údjango.contrib.auth.modelsr   ÚmodelsÚformsr   r   r   Ú filtersr   Ú
+decoratorsr   r   r   r$   r(   r)   r&   r=   rA   rC   r:   rU   rW   rZ   r"   r"   r"   r#   Ú<module>   sP   
+
+
+
+
+
+
+
+
+
+
+

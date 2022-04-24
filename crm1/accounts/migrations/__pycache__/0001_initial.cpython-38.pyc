@@ -1,0 +1,15 @@
+U
+    ÿŒå]ï  ã                   @   s&   d dl mZmZ G dd„ dejƒZdS )é    )Ú
+migrationsÚmodelsc                
+   @   sx   e Zd ZdZg Zejdde jdddddfd e j	ddd	fd
+e j	ddd	fd
+e j	ddd	fde j
+ddd
+fgdgZ
+dS )Ú	MigrationTÚCustomerÚidFÚID)Úauto_createdÚ
+primary_keyÚ	serializeÚverbose_nameÚnameéÈ   )Ú
+max_lengthÚnullÚphoneÚemailÚdate_created)Úauto_now_addr   )r   ÚfieldsN)Ú__name__Ú
+__module__Ú__qualname__Ú initialÚdependenciesr   Ú
+CreateModelr   Ú	AutoFieldÚ	CharFieldÚ
+DateTimeFieldÚ
+operations© r   r   úHC:\Users\denni\OneDrive\Desktop\crm1\accounts\migrations\0001_initial.pyr      s   ûşÿr   N)Ú	django.dbr   r   r   r   r   r   r    Ú<module>   s   

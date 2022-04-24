@@ -1,0 +1,5 @@
+B
+    Å6^å  ã               @   sJ   d dl mZ d dlmZ d dlmZ ddlmZ dd „ Z eje ed d	S )
+é    )Ú	post_save)ÚUser)ÚGroupé   )ÚCustomerc             K   s<   |r8t jjdd}|j |¡ tjj||j d tdƒ d S )NÚcustomer)Úname)Úuserr   zProfile created!)	r   Ú objectsÚgetÚgroupsÚaddr   ÚcreateÚusernameÚprint)ÚsenderÚinstanceÚ createdÚkwargsÚgroup© r   ú8C:\Users\denni\OneDrive\Desktop\crm1\accounts\signals.pyÚcustomer_profile   s    
+r   )r   N)	Zdjango.db.models.signalsr   Údjango.contrib.auth.modelsr   r   Úmodelsr   r   Ú connectr   r   r   r   Ú<module>   s
+   

@@ -1,5 +1,5 @@
-B
-    |ä^Ò  ã               @   sl   d Z ddlmZ ddlmZmZ ddlm Z  ddlm	Z	 edej
+U
+    |ä^Ò  ã                   @   sl   d Z ddlmZ ddlmZmZ ddlm Z  ddlm	Z	 edej
 j
 ƒed edƒƒgZee e	j
 e	jd	7 Zd
@@ -19,9 +19,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 é    )Úadmin)ÚpathÚ include)Ústatic)Úsettingszadmin/Ú z
-accounts.urls)Ú
+accounts.urls)Z
 document_rootN)Ú __doc__Zdjango.contribr   Ú
 django.urlsr   r   Zdjango.conf.urls.staticr   Ú
 django.confr   ÚsiteÚurlsÚ
 urlpatternsÚ	MEDIA_URLÚ
-MEDIA_ROOT© r   r   ú1C:\Users\denni\OneDrive\Desktop\crm1\crm1\urls.pyÚ<module>   s   
+MEDIA_ROOT© r   r   ú1C:\Users\denni\OneDrive\Desktop\crm1\crm1\urls.pyÚ<module>   s   ş

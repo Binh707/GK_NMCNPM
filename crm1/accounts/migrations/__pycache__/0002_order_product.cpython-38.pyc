@@ -1,0 +1,17 @@
+U
+    Ì‘å]g  ã                   @   s&   d dl mZmZ G dd„ dejƒZdS )é    )Ú
+migrationsÚmodelsc                
+   @   sÒ   e Zd ZdgZejddej ddddd fdejddd	fd
+ej	d
+dd
+gdddfgdejddej ddddd fdej	dddfdej
+ddfdej	ddgdddfdej	dddfdejddd	fgdgZ
+dS )Ú	Migration)ÚaccountsÚ0001_initialÚOrderÚidTFÚID)Úauto_createdÚ
+primary_keyÚ	serializeÚverbose_nameÚdate_created)Úauto_now_addÚnullÚstatus)Ú Pendingr   )úOut for deliveryr   )Ú	Deliveredr   éÈ   )Ú choicesÚ
+max_lengthr   )ÚnameÚfieldsÚ Productr   )r   r   Úprice)r   Úcategory)ÚIndoorr   )úOut Doorr   Ú
+descriptionN)Ú__name__Ú
+__module__Ú__qualname__Údependenciesr   Ú
+CreateModelr   Ú	AutoFieldÚ
+DateTimeFieldÚ	CharFieldÚ
+FloatFieldÚ
+operations© r*   r*   úNC:\Users\denni\OneDrive\Desktop\crm1\accounts\migrations\0002_order_product.pyr      s(   ÿışúş÷r   N)Ú	django.dbr   r   r   r*   r*   r*   r+   Ú<module>   s   

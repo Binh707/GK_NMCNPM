@@ -1,5 +1,5 @@
-B
-    êÔ^D   ã               @   s  d dl mZ d dlmZ ddlmZ edejdded ej dded	ejd
+U
+    êÔ^D   ã                   @   s  d dl mZ d dlmZ ddlmZ edejdded ej dded	ejd
 ded
 ej	dded
 ej
@@ -15,5 +15,4 @@ logoutUserr
 createOrderZ
 updateOrderZ
 deleteOrderZPasswordResetViewÚ as_viewZPasswordResetDoneViewZPasswordResetConfirmViewZPasswordResetCompleteViewÚ
-urlpatterns© r   r   ú5C:\Users\denni\OneDrive\Desktop\crm1\accounts\urls.pyÚ<module>   s4   
-
+urlpatterns© r   r   ú5C:\Users\denni\OneDrive\Desktop\crm1\accounts\urls.pyÚ<module>   s>   şşşşã%
