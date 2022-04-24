@@ -1,13 +1,17 @@
 B
-    Ìó]Ş  ã            
-   @   st   d dl mZ ddlmZ edejdded ejdded	ejd
+    Ò•^  ã            
+   @   s   d dl mZ ddlmZ edejdded ejdded	ejd
 ded
 ej dded
-ejddedej	ddgZ
-dS )é    )Úpathé   )ÚviewsÚ Úhome)Únamez	products/Úproductszcustomer/<str:pk_test>/Úcustomerzcreate_order/<str:pk>/Zcreate_orderzupdate_order/<str:pk>/Zupdate_orderzdelete_order/<str:pk>/Zdelete_orderN)
-Ú
-django.urlsr   r   r   r   r   r	   Z
+ejddedej	ddedej
+ddedej
+ddedejddg	Z
+dS )é    )Úpathé   )Úviewsz	register/Úregister)Únamezlogin/Úloginz logout/ÚlogoutÚ Úhomez	products/Úproductszcustomer/<str:pk_test>/Úcustomerzcreate_order/<str:pk>/Zcreate_orderzupdate_order/<str:pk>/Zupdate_orderzdelete_order/<str:pk>/Zdelete_orderN)Ú
+django.urlsr   r	   r   ZregisterPageZ	loginPageZ
+logoutUserr
+   r
+   r   Z
 createOrderZ
 updateOrderZ
 deleteOrderÚ
-urlpatterns© r   r   ú5C:\Users\denni\OneDrive\Desktop\crm1\accounts\urls.pyÚ<module>   s   
+urlpatterns© r   r   ú5C:\Users\denni\OneDrive\Desktop\crm1\accounts\urls.pyÚ<module>   s   

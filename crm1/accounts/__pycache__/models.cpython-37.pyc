@@ -1,5 +1,5 @@
 B
-    ªDğ]à  ã               @   sX   d dl mZ G dd„ dejƒZG dd„ dejƒZG dd „ d ejƒZG dd	„ d	ejƒZd
+    Uô]  ã               @   sX   d dl mZ G dd„ dejƒZG dd„ dejƒZG dd „ d ejƒZG dd	„ d	ejƒZd
 S )
 é    )Úmodelsc               @   sL   e Zd ZejdddZejdddZejdddZ ejdddZ	dd„ Z
 d S )ÚCustomeréÈ   T)Ú
@@ -38,21 +38,23 @@ descriptionr   r   ÚManyToManyFieldr   Útagsr   r
    r
    r
    r      s   
-r   c               @   sZ   e Zd ZdZejedej dZeje	dej dZ
+r   c               @   sh   e Zd ZdZejedej dZeje	dej dZ
 ej
 dddZej
-ddedZd d„ Zd	S )
-ÚOrder))Ú Pendingr!   )zOut for deliveryzOut for delivery)Ú	Deliveredr"   T)r   Ú	on_delete)r    r   r   )r   r   r   c             C   s   | j jS )N)Ú productr   )r	   r
+ddedZej
+d ddZd	d
+„ Zd
+S )ÚOrder))Ú Pendingr!   )zOut for deliveryzOut for delivery)Ú	Deliveredr"   T)r   Ú	on_delete)r    r   r   )r   r   r   iè  )r   r   c             C   s   | j jS )N)Ú productr   )r	   r
    r
    r
-   r   1   s    z
-Order.__str__N)r
+   r   2   s    z
+Order.__str__N)r
    r   r   ZSTATUSr   Ú
-ForeignKeyr   ÚSET_NULLZcustomerr   r$   r   r   r   Ústatusr   r
+ForeignKeyr   ÚSET_NULLZcustomerr   r$   r   r   r   ÚstatusZnoter   r
    r
    r
    r
-   r    %   s   r    N) Ú	django.dbr   ÚModelr   r   r   r    r
+   r    %   s   r    N) Ú	django.dbr   ÚModelr   r   r   r    r
    r
    r
    r
